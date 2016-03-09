@@ -1,0 +1,19 @@
+Package: plaint
+Type: Package
+Title: Plain Table Markup Language
+Version: 0.4.0
+Date: 2016-03-01
+Author: "Fabian H. C. Raters <mail@qrat.de> [aut, cre]"
+Maintainer: Fabian H. C. Raters <mail@qrat.de>
+Description: Package provides two comfortable and sophisticated tools for
+    creating dynamic formattings of data arrays and exporting them to LaTeX tables.
+    The tables themselves are designed by means of the PlainT markup language in a
+    design text file which can be edited by an arbitrary text editor.
+Imports:
+    utils
+Depends:
+    R (>= 3.1.2)
+License: MIT + file LICENSE
+LazyData: TRUE
+ByteCompile: FALSE
+RoxygenNote: 5.0.1
