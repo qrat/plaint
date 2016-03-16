@@ -164,10 +164,12 @@ The function creates a state of the art user-designed LaTeX table
 ## basic example
 latex(mtcars)
 
+
 ## table example
 latex(table(state.division, state.region), design = "table.txt")
 
-## in combination with form
+
+## advanced example in combination with form
 mtcarsf <- form(data = mtcars,
                 format = "\%i",
                 formatcolumns = list("\%5.1f" = "disp",
@@ -185,11 +187,33 @@ mtcarsf <- form(data = mtcars,
                                "\\\\textbf{v}" = "=="),
                 groups = list(german = c("Merc", "Porsche")))
 
+# translate the formed frame into a LaTeX table
 latex(mtcarsf, design = "mtcars.txt")
 
 # use the generated template "mtcars.txt" to design the LaTeX table and
 # re-run the last command
 latex(mtcarsf, design = "mtcars.txt")
+
+# Three different example plaint designs are already included in this package
+# for learning purposes. You are free to view, copy or edit them with your
+# prefered text editor. You find their paths within this package by means
+# of system.file().
+
+# design 1
+latex(mtcarsf,
+      file = "mt_table1.tex",
+      design = system.file("extdata", "mt_design1.txt", package = "plaint"),
+      options = list(document = "document1.tex"))
+
+# design 2
+latex(mtcarsf,
+      file = "mt_table2.tex",
+      design = system.file("extdata", "mt_design2.txt", package = "plaint"))
+
+# design 3
+latex(mtcarsf,
+      file = "mt_table3.tex",
+      design = system.file("extdata", "mt_design3.txt", package = "plaint"))
 }
 \seealso{
 For forming a dataset, see \code{\link{form}}.
