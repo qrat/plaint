@@ -22,7 +22,7 @@ version is almost stable.
 * Install the most recent version:
 
     ```r
-    devtools::install_github("qrat/plaint")
+    devtools::install_github("ratmaster/plaint")
     ```
     
 * When the installation is finished, you can employ the package:
@@ -45,7 +45,7 @@ version is almost stable.
 
 ### Documentation
 I will publish a vignette soon. At the moment, 
-[this poster](http://qrat.de/plaint/poster.pdf) might be a good source to get
+[this poster](http://ratmaster.de/plaint/poster.pdf) might be a good source to get
 an overview of the project and the basics of `plaint`.
 
 Please see the function documentations of `form` and `latex`:
